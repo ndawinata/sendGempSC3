@@ -41,6 +41,7 @@ scp /tmp/flagscp.txt bmg@172.60.162.250:/home/bmg/prg/flagscp.txt
 
 #to esdx
 echo "InfoNGempa Mag:$mag SR, $tglwkt,Lok: $llbb, Kedalaman: $dep Km $namaclient">/home/sysop/alarm/data/dataresume.txt
+python3 sendEGempa.py -m $mag -t $tglwkt -lok $llbb -lat $lat -lon $lon -d $dep
 echo Informasi >/home/sysop/alarm/data/flagresume.txt
 echo Informasi >/home/sysop/alarm/data/flagesdx.txt
 cp /home/sysop/data/mailexportfile.txt /home/sysop/data/evefile.txt
